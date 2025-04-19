@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Approved Events</title>
+</head>
+<body>
+<h1>Approved Events</h1>
+<ul>
+    <li th:each="event : ${events}" th:text="${event.toString()}">Event</li>
+</ul>
+
+<button type="button" onclick="location.href='/admin/events'">Back to All Events</button>
+<button type="button" onclick="location.href='/'">Go Home</button>
+</body>
+</html>

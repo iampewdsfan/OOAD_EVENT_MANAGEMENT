@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        button[type="button"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="button"]:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/admin/addClub" method="post">
+            <label>Club head Name:</label>
+            <input type="text" name="nid" required />
+
+            <label>Club head SRN:</label>
+            <input type="text" name="id" required />
+
+            <label>Name of Club:</label>
+            <input type="text" name="name" required />
+
+            <label>Description:</label>
+            <input type="text" name="description" required />
+
+            <button type="submit">Add Club</button>
+        </form>
+        <button type="button" onclick="location.href='/'">Go Home</button>
+    </div>
+</body>
+</html>
